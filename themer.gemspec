@@ -3,7 +3,7 @@ require File.expand_path(File.join('..', 'lib', 'themer', 'version'), __FILE__)
 
 Gem::Specification.new do |gem|
     gem.name                  = 'themer'
-    gem.version               = Themify::VERSION
+    gem.version               = Themer::VERSION
     gem.platform              = Gem::Platform::RUBY
     gem.summary               = 'Themes for Rails apps'
     gem.description           = 'Add support for multiple color themes in your Rails app. Themer uses CSS variables to make your apps themes truly dynamic and changeable on the fly.'
