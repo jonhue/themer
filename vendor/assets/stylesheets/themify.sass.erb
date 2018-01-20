@@ -1,0 +1,21 @@
+html
+    <% Themify.configuration.themes.each do |theme| %>&.themify--<%= theme %>
+        @each $name, $color in $themify--<%= theme %>
+            @if type-of($color) == map
+                @each $subname, $subsize in $color
+                    --color-#{$name}-#{$subname}: #{$subsize}
+            @else if type-of($color) == color
+                --color-#{$name}: #{$color}
+    <% end %>
+
+@function color( $color-name, $color-variant:null, $true-val:false )
+    @if $true-val == true
+        @if ( $color-variant != null )
+            @return map-get(map-get($themify--<%= Themify.configuration.default %>,$color-name),$color-variant)
+        @else
+            @return map-get($themify--<%= Themify.configuration.default %>,$color-name)
+    @else
+        @if ( $color-variant != null )
+            @return var(--color-#{$color-name}-#{$color-variant})
+        @else
+            @return var(--color-#{$color-name})
