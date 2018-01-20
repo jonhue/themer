@@ -1,4 +1,4 @@
-module Themify
+module Themer
 
     class << self
         attr_accessor :configuration

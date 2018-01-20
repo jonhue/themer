@@ -1,11 +1,11 @@
 require 'rails/railtie'
 
-module Themify
+module Themer
     class Railtie < Rails::Railtie
 
-        initializer 'themify.initialize' do
+        initializer 'themer.initialize' do
             ActiveSupport.on_load :action_controller do
-                include ThemifyHelper
+                include ThemerHelper
             end
         end
 

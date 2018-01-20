@@ -1,4 +1,4 @@
-Themify.configure do |config|
+Themer.configure do |config|
 
     # Array of available themes
     # config.themes = ['default']

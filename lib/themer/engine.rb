@@ -1,6 +1,6 @@
 require 'rails/railtie'
 
-module Themify
+module Themer
     class Engine < Rails::Engine
     end
 end
