@@ -1,6 +1,6 @@
 html
-    <% Themify.configuration.themes.each do |theme| %>&.themify--<%= theme %>
-        @each $name, $color in $themify--<%= theme %>
+    <% Themer.configuration.themes.each do |theme| %>&.themer--<%= theme %>
+        @each $name, $color in $themer--<%= theme %>
             @if type-of($color) == map
                 @each $subname, $subsize in $color
                     --color-#{$name}-#{$subname}: #{$subsize}
@@ -11,9 +11,9 @@ html
 @function color( $color-name, $color-variant:null, $true-val:false )
     @if $true-val == true
         @if ( $color-variant != null )
-            @return map-get(map-get($themify--<%= Themify.configuration.default %>,$color-name),$color-variant)
+            @return map-get(map-get($themer--<%= Themer.configuration.default %>,$color-name),$color-variant)
         @else
-            @return map-get($themify--<%= Themify.configuration.default %>,$color-name)
+            @return map-get($themer--<%= Themer.configuration.default %>,$color-name)
     @else
         @if ( $color-variant != null )
             @return var(--color-#{$color-name}-#{$color-variant})
