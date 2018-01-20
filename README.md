@@ -98,7 +98,7 @@ p
     color: color(text, base)
 ```
 
-**Note:** If you need to get a HEX value for a specific color pass `true` as a third attribute to the color function. This will return the color for the theme set as default.
+**Note:** If you need to get a HEX value for a specific color pass `true` as a third parameter to the color function. This will return the color for the theme set as default.
 
 ### Methods
 
