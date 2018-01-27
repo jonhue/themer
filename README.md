@@ -4,6 +4,8 @@
 
 Add support for multiple color themes in your Rails app. Themer uses CSS variables to make your apps themes truly dynamic and changeable on the fly.
 
+**Themer has been merged into [Myg](https://github.com/jonhue/myg) and [Myg on Rails](https://github.com/jonhue/myg-rails)**
+
 ---
 
 ## Table of Contents
